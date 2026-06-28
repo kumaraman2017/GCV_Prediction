@@ -1,6 +1,6 @@
 {
   "model_name": "extra_trees",
-  "trained_at": "2026-06-28T20:37:45.945732+00:00",
+  "trained_at": "2026-06-28T21:27:34.472201+00:00",
   "feature_columns": [
     "Moisture",
     "Volatile_matter",

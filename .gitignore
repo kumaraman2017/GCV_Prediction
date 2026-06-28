@@ -11,3 +11,4 @@ build/
 .ipynb_checkpoints/
 .superpowers/
 .claude/
+catboost_info/

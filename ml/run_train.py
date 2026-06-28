@@ -58,7 +58,7 @@ def main() -> None:
         "is_tree_based": best.spec.is_tree_based,
         "X_train": X_train_for_best,
         "y_train": y_train,
-        "residual_std": float(residuals_train.std()),
+        "residual_std": float(best.metrics["rmse"]),
         "residuals_train": residuals_train,
         "feature_ranges": feature_ranges,
     }
