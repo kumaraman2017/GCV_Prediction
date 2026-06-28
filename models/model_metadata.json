@@ -1,0 +1,16 @@
+{
+  "model_name": "extra_trees",
+  "trained_at": "2026-06-28T20:37:45.945732+00:00",
+  "feature_columns": [
+    "Moisture",
+    "Volatile_matter",
+    "Fixed_Carbon",
+    "Std.Ash"
+  ],
+  "target_column": "GCV",
+  "metrics": {
+    "rmse": 0.6425430891228172,
+    "mae": 0.45781685459849514,
+    "r2": 0.9903616236917542
+  }
+}
