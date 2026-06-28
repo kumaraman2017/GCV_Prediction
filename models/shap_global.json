@@ -1,0 +1,4010 @@
+{
+  "global_feature_importance": {
+    "Moisture": 4.058190626550368,
+    "Volatile_matter": 0.148114445864268,
+    "Fixed_Carbon": 1.3341058032052333,
+    "Std.Ash": 1.1887466839562313
+  },
+  "summary_plot_sample": [
+    {
+      "feature": "Moisture",
+      "feature_value": 2.86,
+      "shap_value": 2.9204116457465648
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 29.98,
+      "shap_value": -0.1346031829552003
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 55.75,
+      "shap_value": 1.3786365579045794
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.41,
+      "shap_value": -0.19556419915388631
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.6,
+      "shap_value": 3.184541953605767
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.4,
+      "shap_value": 0.03480969740860912
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 56.9,
+      "shap_value": 1.4059973716886518
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.1,
+      "shap_value": 1.3356075832952512
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 19.41,
+      "shap_value": -7.4658606245751455
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.69,
+      "shap_value": 0.08588030077964164
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 41.71,
+      "shap_value": -0.7188662713937275
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.19,
+      "shap_value": 1.1298497681247905
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 13.9,
+      "shap_value": -5.0937758844515475
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.6,
+      "shap_value": 0.08545390236628667
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 46.0,
+      "shap_value": 0.09738191490477631
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.5,
+      "shap_value": 1.1921367804814516
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.6,
+      "shap_value": 3.789514979404012
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 16.8,
+      "shap_value": -0.15034781425203625
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 71.0,
+      "shap_value": 2.114644332241293
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.6,
+      "shap_value": -0.08391964627958026
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 18.1,
+      "shap_value": -6.47643280268027
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.0,
+      "shap_value": 0.009685220645916832
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 39.6,
+      "shap_value": -1.1517005204000357
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.3,
+      "shap_value": 0.31425992640230854
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.29,
+      "shap_value": 2.7225885303163726
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 21.23,
+      "shap_value": -0.14954387873903396
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 69.79,
+      "shap_value": 2.3406210957189155
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.69,
+      "shap_value": 1.3797108442547188
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 12.03,
+      "shap_value": -3.728235334317772
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.8,
+      "shap_value": 0.13059140868015076
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 47.43,
+      "shap_value": 0.4390358013025111
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.74,
+      "shap_value": 1.3095302024899327
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.5,
+      "shap_value": 3.342358388759435
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 40.6,
+      "shap_value": 0.2334926372338852
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 46.1,
+      "shap_value": -0.2156920979250571
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.8,
+      "shap_value": 0.12435776438340464
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.1,
+      "shap_value": 4.259565076453759
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 29.7,
+      "shap_value": -0.12749999220668715
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 62.0,
+      "shap_value": 1.862311763300174
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.2,
+      "shap_value": 0.9660718891810903
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.85,
+      "shap_value": 3.6087126943515253
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 23.39,
+      "shap_value": -0.17020181549857022
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 66.18,
+      "shap_value": 2.097709033079018
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.58,
+      "shap_value": 0.4836180534299346
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.9,
+      "shap_value": 2.884708489435574
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.0,
+      "shap_value": 0.049558149172235465
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.2,
+      "shap_value": 0.8508409993886439
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.9,
+      "shap_value": 1.0273146474133272
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.14,
+      "shap_value": 1.4307900487935885
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.13,
+      "shap_value": 0.20529127032591857
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 42.38,
+      "shap_value": -0.7516051245708661
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 13.35,
+      "shap_value": -0.4739179904325276
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 8.4,
+      "shap_value": -1.0308513827230015
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.5,
+      "shap_value": 0.23860993427673485
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 42.8,
+      "shap_value": -0.6641062619788165
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.3,
+      "shap_value": 0.473140237386939
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.9,
+      "shap_value": 2.78508259691822
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.6,
+      "shap_value": -0.004467140574763921
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 51.4,
+      "shap_value": 0.5564972747458863
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.1,
+      "shap_value": -0.14366431866644702
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.1,
+      "shap_value": 4.365592070513857
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 29.11,
+      "shap_value": -0.14359158217330129
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 66.43,
+      "shap_value": 2.175930912819802
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 3.36,
+      "shap_value": 2.1800045826156693
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.0,
+      "shap_value": 3.672253587785653
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 36.5,
+      "shap_value": 0.03906567654498459
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 56.7,
+      "shap_value": 1.2439456366693595
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.8,
+      "shap_value": 1.7373661328779102
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.6,
+      "shap_value": 2.989314287094583
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.1,
+      "shap_value": -0.08803746495446921
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 55.6,
+      "shap_value": 1.212371464042397
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.7,
+      "shap_value": 0.20302590230714718
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.4,
+      "shap_value": 4.00900644016985
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.4,
+      "shap_value": -0.0462177020980069
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 57.6,
+      "shap_value": 1.4730162658596533
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.6,
+      "shap_value": 0.5734232983627087
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 0.95,
+      "shap_value": 3.653258323391474
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 20.25,
+      "shap_value": -0.46865906329738594
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.85,
+      "shap_value": 0.62933660768327
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 27.95,
+      "shap_value": -4.789603073161715
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.9,
+      "shap_value": 3.5101214079318157
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.7,
+      "shap_value": -0.016257688378213505
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 55.9,
+      "shap_value": 1.1994111231557014
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.5,
+      "shap_value": 0.5770959151457213
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.3,
+      "shap_value": 4.27262819376966
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.9,
+      "shap_value": 0.15447020643303155
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.8,
+      "shap_value": -0.41312739370486423
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 16.0,
+      "shap_value": -1.1861675970547525
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.0,
+      "shap_value": 2.9253165323167374
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.5,
+      "shap_value": -0.03223590932142561
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 59.9,
+      "shap_value": 1.9343635997516389
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.6,
+      "shap_value": 1.3827504695487722
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.4,
+      "shap_value": 3.8644434855315843
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 6.8,
+      "shap_value": -0.4517081679465464
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 85.0,
+      "shap_value": 1.863568087055899
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.8,
+      "shap_value": 0.927155535557907
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 22.82,
+      "shap_value": -8.415714999040084
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.55,
+      "shap_value": 0.3371864748050524
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 32.51,
+      "shap_value": -2.7683961591947694
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.12,
+      "shap_value": 0.6241800137784568
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 14.5,
+      "shap_value": -4.314225029981722
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.9,
+      "shap_value": -0.19707057421920215
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 36.5,
+      "shap_value": -2.0180246715992376
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 18.1,
+      "shap_value": -1.2001203648341179
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 23.1,
+      "shap_value": -8.771392267464757
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 27.7,
+      "shap_value": -0.43057234717860143
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 40.9,
+      "shap_value": -0.8566263821015544
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.3,
+      "shap_value": 0.24931207452930684
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 10.0,
+      "shap_value": -2.317395696929739
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.0,
+      "shap_value": -0.017881439113368792
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 43.7,
+      "shap_value": -0.5521311320759485
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.3,
+      "shap_value": -0.02059568594021667
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.83,
+      "shap_value": 2.7854545942615347
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 21.74,
+      "shap_value": -0.1989868249961305
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 62.78,
+      "shap_value": 1.8720385820983323
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 12.65,
+      "shap_value": -0.9927219916376054
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.65,
+      "shap_value": 3.007399945531351
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.89,
+      "shap_value": -0.04780367511598103
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 48.33,
+      "shap_value": 0.15025916977714307
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 16.13,
+      "shap_value": -1.4367440913976952
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.38,
+      "shap_value": 3.3051558377133636
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.55,
+      "shap_value": -0.0018849549248926773
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 56.63,
+      "shap_value": 1.3171446548910943
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.44,
+      "shap_value": 0.9521827385372584
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.0,
+      "shap_value": 4.233089780861023
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 23.3,
+      "shap_value": -0.17688844377755042
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 66.2,
+      "shap_value": 2.0735637412418555
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.5,
+      "shap_value": 0.2694644276944316
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.6,
+      "shap_value": 2.4095882612285235
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.5,
+      "shap_value": -0.013289394780711198
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 57.6,
+      "shap_value": 1.6505105993437472
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.3,
+      "shap_value": 1.2353590239447167
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.0,
+      "shap_value": 1.1149905443132095
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.4,
+      "shap_value": -0.14970618890595605
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 48.4,
+      "shap_value": 0.17035150765260093
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 15.2,
+      "shap_value": -1.2046640129866397
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.1,
+      "shap_value": 1.0500798878300255
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.3,
+      "shap_value": 0.08479523982179901
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.2,
+      "shap_value": -0.46717785980366977
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.4,
+      "shap_value": -0.17522774352611073
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 18.2,
+      "shap_value": -5.46408633191425
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 22.0,
+      "shap_value": -0.6845183354468576
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 32.4,
+      "shap_value": -2.797777887822139
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 27.4,
+      "shap_value": -2.861393405183803
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.9,
+      "shap_value": 3.518528886464864
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.22,
+      "shap_value": -0.16879851408793126
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 57.42,
+      "shap_value": 1.5246985152452495
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 14.46,
+      "shap_value": -1.1262698932540793
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 37.8,
+      "shap_value": -13.13267991395751
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 27.4,
+      "shap_value": -0.2063300957764624
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 28.4,
+      "shap_value": -3.449546459670169
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.4,
+      "shap_value": 0.6468991609666388
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.1,
+      "shap_value": 2.712777990993359
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.3,
+      "shap_value": -0.036294582482149236
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.5,
+      "shap_value": -0.2792129538523588
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 17.1,
+      "shap_value": -1.5602116450239336
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 16.33,
+      "shap_value": -4.736691108164275
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.27,
+      "shap_value": 0.37469994079646357
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 27.57,
+      "shap_value": -3.757016138967
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 16.83,
+      "shap_value": -0.8139864607980415
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 10.89,
+      "shap_value": -3.144290002945613
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.68,
+      "shap_value": 0.05151404237712635
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 46.85,
+      "shap_value": 0.2340608117261079
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.58,
+      "shap_value": 0.6214137271847857
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.0,
+      "shap_value": 1.9205344383288492
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 41.19,
+      "shap_value": 0.1301459793735882
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 51.04,
+      "shap_value": 0.3538970699516173
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 3.77,
+      "shap_value": 1.7572608378249777
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 0.8,
+      "shap_value": 3.78755238106054
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 17.2,
+      "shap_value": -0.28500879573498983
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 57.4,
+      "shap_value": 1.3842480763243759
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 24.6,
+      "shap_value": -4.319991152109565
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 7.7,
+      "shap_value": -0.225532942489305
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.6,
+      "shap_value": 0.23622408022025015
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 39.3,
+      "shap_value": -1.4844571061042364
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 14.4,
+      "shap_value": -0.7709049991893082
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.7,
+      "shap_value": 1.3793704964121911
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.5,
+      "shap_value": -0.004762237339404234
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 54.3,
+      "shap_value": 1.2534712887836523
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.5,
+      "shap_value": 0.7903080719168402
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.97,
+      "shap_value": 3.784444845785267
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 40.12,
+      "shap_value": 0.1420731289571154
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.57,
+      "shap_value": 0.8729367882159084
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.34,
+      "shap_value": 1.914883410581061
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.96,
+      "shap_value": 3.648939304830218
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.26,
+      "shap_value": 0.020632965874666453
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 59.63,
+      "shap_value": 1.7031396025106926
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.15,
+      "shap_value": 1.9233701875547757
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.37,
+      "shap_value": 2.5017404385470914
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.81,
+      "shap_value": 0.03504043738240541
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.17,
+      "shap_value": 0.3926481237922926
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.65,
+      "shap_value": 0.03535922802453533
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.4,
+      "shap_value": 3.4872943418367446
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 40.7,
+      "shap_value": 0.24578575992800503
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.2,
+      "shap_value": 0.4394133489750677
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.7,
+      "shap_value": 1.2732642501766436
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 8.0,
+      "shap_value": -0.7365343230756223
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 40.3,
+      "shap_value": 0.37181263564826267
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.7,
+      "shap_value": -0.16277780972080405
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.0,
+      "shap_value": 1.047061157240471
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 14.7,
+      "shap_value": -3.8304557351213178
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 27.4,
+      "shap_value": -0.4120131234871968
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 30.6,
+      "shap_value": -3.1652656729039634
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 27.3,
+      "shap_value": -2.787468956197156
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.33,
+      "shap_value": 4.056601114111004
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.49,
+      "shap_value": -0.0162570293729456
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 54.53,
+      "shap_value": 1.109752279188006
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.65,
+      "shap_value": -0.011787371986084327
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 12.4,
+      "shap_value": -3.4826224535761274
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.2,
+      "shap_value": 0.2745692170757806
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 39.6,
+      "shap_value": -1.2932674384811527
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.8,
+      "shap_value": 0.5796739963329202
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 38.4,
+      "shap_value": -13.182961825004284
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.3,
+      "shap_value": -0.20438557132567392
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 29.0,
+      "shap_value": -3.3007733842696734
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.3,
+      "shap_value": 0.688638738448335
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.9,
+      "shap_value": 0.6896390360503648
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.28,
+      "shap_value": -0.40943723521288194
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.52,
+      "shap_value": -0.0899789982548397
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.3,
+      "shap_value": -2.51612813125886
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.9,
+      "shap_value": 3.540180021940372
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.65,
+      "shap_value": 0.03625749091418046
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 52.2,
+      "shap_value": 0.6738264218134489
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.25,
+      "shap_value": 0.1068433473587588
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.5,
+      "shap_value": 3.750768501223678
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 20.4,
+      "shap_value": -0.1947351886207476
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 66.8,
+      "shap_value": 1.9613700771704914
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.3,
+      "shap_value": -0.44926018026549025
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.44,
+      "shap_value": 2.5579998070011185
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.02,
+      "shap_value": 0.14499784655042453
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 52.76,
+      "shap_value": 0.7997606805597516
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.78,
+      "shap_value": 1.6684880057066884
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.2,
+      "shap_value": 3.4407018485374463
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.0,
+      "shap_value": -0.03130460285749592
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.9,
+      "shap_value": -0.40481070203007236
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 17.9,
+      "shap_value": -1.7243643918503098
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 8.24,
+      "shap_value": -1.321779390851379
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.74,
+      "shap_value": -0.0007137046241893475
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 47.89,
+      "shap_value": 0.22839399080284878
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.13,
+      "shap_value": 0.5196505276804128
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 37.8,
+      "shap_value": -12.868034997273313
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 25.2,
+      "shap_value": -0.2742272175489465
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 27.9,
+      "shap_value": -3.416391305772561
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.1,
+      "shap_value": 0.2649847629017665
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.75,
+      "shap_value": 3.6960463994350277
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.11,
+      "shap_value": -0.09732538058089016
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 57.63,
+      "shap_value": 1.482302256888664
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.51,
+      "shap_value": 0.02815173775174415
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.7,
+      "shap_value": 3.0594390319171656
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.5,
+      "shap_value": 0.03565828817166177
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 55.3,
+      "shap_value": 1.109161486590644
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.5,
+      "shap_value": 1.1362391925332984
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.5,
+      "shap_value": 4.083264571223465
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 24.5,
+      "shap_value": -0.1542172449618954
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 70.4,
+      "shap_value": 2.3133210538563937
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 3.6,
+      "shap_value": 2.145157253739043
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.4,
+      "shap_value": 4.082047818050089
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.6,
+      "shap_value": 0.1780953214856618
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 47.1,
+      "shap_value": -0.07515602019906968
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.9,
+      "shap_value": -0.2375033431109041
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 9.9,
+      "shap_value": -1.5280077629753868
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.4,
+      "shap_value": -0.055463599284415493
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 35.5,
+      "shap_value": -2.354333810554862
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.2,
+      "shap_value": -2.270969809102128
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 7.01,
+      "shap_value": -0.10184444061190095
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 16.34,
+      "shap_value": -0.5382046969506447
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 46.53,
+      "shap_value": 0.044246892456065993
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 30.12,
+      "shap_value": -4.156213106920127
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.22,
+      "shap_value": 1.0525863714400259
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.99,
+      "shap_value": 0.14417064100914068
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 52.44,
+      "shap_value": 0.8858733050177389
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.35,
+      "shap_value": 1.7243231243288926
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.38,
+      "shap_value": 2.699093295072631
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.0,
+      "shap_value": -0.025218118701214542
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 62.05,
+      "shap_value": 2.0821140012123327
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 2.57,
+      "shap_value": 2.120283028397795
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.6,
+      "shap_value": 3.9372783405413796
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 27.94,
+      "shap_value": -0.14795738927753546
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 65.75,
+      "shap_value": 2.1165763975928176
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.71,
+      "shap_value": 1.7784458306285515
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.44,
+      "shap_value": 4.114382058764336
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.0,
+      "shap_value": 0.11111397261651347
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.39,
+      "shap_value": -0.3529326572741182
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 16.17,
+      "shap_value": -1.2622784261116426
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 39.1,
+      "shap_value": -13.7060849132925
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.7,
+      "shap_value": -0.25456556583082496
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 28.6,
+      "shap_value": -3.5475042783617607
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.6,
+      "shap_value": 0.6744970146446463
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.7,
+      "shap_value": 3.129925840192741
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.3,
+      "shap_value": 0.0008267665937764277
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 58.3,
+      "shap_value": 1.5061457585734612
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 3.7,
+      "shap_value": 1.9027785941901032
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.11,
+      "shap_value": 0.9816386275809688
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.92,
+      "shap_value": -0.052345654051277925
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.65,
+      "shap_value": 1.045296235326158
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.32,
+      "shap_value": 0.5151662415234709
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.6,
+      "shap_value": 2.36441885907161
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.3,
+      "shap_value": 0.07749235071949136
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 55.5,
+      "shap_value": 1.2136029351934154
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 3.6,
+      "shap_value": 1.848546913515238
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 10.0,
+      "shap_value": -1.7562178839983473
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.2,
+      "shap_value": -0.09154770262121414
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 36.8,
+      "shap_value": -2.1747593335598108
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 21.0,
+      "shap_value": -2.074835448187689
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 18.1,
+      "shap_value": -6.897043906012272
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.5,
+      "shap_value": -0.10020128909060352
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 42.5,
+      "shap_value": -0.5577659476266933
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.9,
+      "shap_value": 0.44882084689550367
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.55,
+      "shap_value": 3.9548078360236874
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.62,
+      "shap_value": -0.02319741373332992
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 58.78,
+      "shap_value": 1.5737948539864781
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.05,
+      "shap_value": 1.326603353758376
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 9.6,
+      "shap_value": -2.019480952643579
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.8,
+      "shap_value": -0.03088272659961154
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.6,
+      "shap_value": -0.27396043661445196
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.0,
+      "shap_value": 0.019574576421275906
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.29,
+      "shap_value": 1.0994877397323723
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.24,
+      "shap_value": 0.18777191301514173
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.13,
+      "shap_value": -0.5340931273803048
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.34,
+      "shap_value": -0.0287675645137534
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.23,
+      "shap_value": 2.41747311253093
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.84,
+      "shap_value": -0.06438284716183301
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 51.91,
+      "shap_value": 0.6095325011672501
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.02,
+      "shap_value": -0.20246718764100233
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.44,
+      "shap_value": 4.1030776369571615
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 29.04,
+      "shap_value": -0.09930377367381996
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 62.41,
+      "shap_value": 1.9190790865202416
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.11,
+      "shap_value": 1.0660132098408488
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.11,
+      "shap_value": 2.873572708299137
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.4,
+      "shap_value": 0.17637236326762412
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 51.25,
+      "shap_value": 0.5541241353158161
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.24,
+      "shap_value": 1.3133888927196689
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.32,
+      "shap_value": 3.230269300021704
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 28.88,
+      "shap_value": -0.13018222311249397
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 52.78,
+      "shap_value": 0.9899425067426331
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 16.02,
+      "shap_value": -1.415752934838256
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.47,
+      "shap_value": 2.4749905918827655
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 29.16,
+      "shap_value": -0.08415284787869015
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 60.26,
+      "shap_value": 1.9297560588523184
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.11,
+      "shap_value": 0.8730597611776086
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.03,
+      "shap_value": 1.9939589380725913
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.45,
+      "shap_value": 0.12683811932561223
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 47.57,
+      "shap_value": -0.015772699310711454
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.95,
+      "shap_value": 0.2588881677660631
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.08,
+      "shap_value": 1.8415936594343418
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.57,
+      "shap_value": 0.02908396941151791
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.58,
+      "shap_value": 0.4890950729580023
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.77,
+      "shap_value": 0.24235826854794235
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.9,
+      "shap_value": 3.2669407777677533
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 21.1,
+      "shap_value": -0.24508953747142134
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 54.7,
+      "shap_value": 1.227377487199406
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.3,
+      "shap_value": -3.2878535186993187
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.12,
+      "shap_value": 4.388381485258385
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.47,
+      "shap_value": -0.0665306669535231
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 65.46,
+      "shap_value": 2.1617930050147107
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 1.95,
+      "shap_value": 2.3972149725053793
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.75,
+      "shap_value": 1.4113301401849168
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.47,
+      "shap_value": 0.03409704100148219
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.61,
+      "shap_value": 1.1212975252627784
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.17,
+      "shap_value": 0.9554850367590528
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 26.7,
+      "shap_value": -10.455979419348735
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.8,
+      "shap_value": -0.03422697430751006
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 34.4,
+      "shap_value": -2.5300018460751463
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.1,
+      "shap_value": 0.6649652449367538
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 12.7,
+      "shap_value": -2.885852103030732
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.2,
+      "shap_value": 0.052251635587981085
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 32.0,
+      "shap_value": -3.00639016250103
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 23.1,
+      "shap_value": -2.265064746834166
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.49,
+      "shap_value": 4.087838374258684
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 23.33,
+      "shap_value": -0.14565019905909954
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 70.08,
+      "shap_value": 2.2908516207414813
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.1,
+      "shap_value": 1.6998477367426421
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.7,
+      "shap_value": 3.5327596540393755
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 22.4,
+      "shap_value": -0.1848737488453186
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 63.7,
+      "shap_value": 1.8474587594376226
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 12.2,
+      "shap_value": -0.8123260201941074
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.3,
+      "shap_value": 2.6761286712942627
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.8,
+      "shap_value": 0.14875098263126219
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 48.5,
+      "shap_value": 0.08544649910323834
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.4,
+      "shap_value": 0.4252264333545738
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.4,
+      "shap_value": 1.647223502430513
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.3,
+      "shap_value": 0.023477795522375184
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 49.9,
+      "shap_value": 0.47109824662370486
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.4,
+      "shap_value": 0.1133408194727519
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 10.4,
+      "shap_value": -2.7097880415400155
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.5,
+      "shap_value": -0.03585317114420115
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.8,
+      "shap_value": -0.21569354878385155
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.3,
+      "shap_value": 0.017685679286900093
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.4,
+      "shap_value": 2.43988673248344
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.7,
+      "shap_value": -0.010093989676852903
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 52.2,
+      "shap_value": 0.7043472458114379
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.7,
+      "shap_value": 0.26736403869616854
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.64,
+      "shap_value": 3.7797003761847843
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.67,
+      "shap_value": -0.15297935155136705
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.12,
+      "shap_value": -0.2523071872393141
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 21.57,
+      "shap_value": -2.589418796325476
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.99,
+      "shap_value": 2.8107998251119093
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.97,
+      "shap_value": 0.0763544733959345
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.22,
+      "shap_value": 0.8200394607406589
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.82,
+      "shap_value": 1.266647899665863
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.81,
+      "shap_value": 0.44607311350740614
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 21.72,
+      "shap_value": -0.16841642976088977
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 60.28,
+      "shap_value": 1.9993795876128206
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 12.19,
+      "shap_value": -0.5942015809522836
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.33,
+      "shap_value": 3.4388281169616373
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.5,
+      "shap_value": 0.16728847348322184
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 51.21,
+      "shap_value": 0.5518032521184241
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.96,
+      "shap_value": 1.144904552712212
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.8,
+      "shap_value": 2.135720444848877
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.7,
+      "shap_value": -0.21478459647656586
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 48.9,
+      "shap_value": 0.27938225879646916
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 16.6,
+      "shap_value": -1.4773129895403028
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 32.1,
+      "shap_value": -10.696787316258636
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 27.25,
+      "shap_value": -0.1791912644641604
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 24.1,
+      "shap_value": -3.992686773569412
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 16.55,
+      "shap_value": -0.8578524462523632
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 39.2,
+      "shap_value": -12.786641068333926
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 21.8,
+      "shap_value": -0.3329295696488666
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 21.8,
+      "shap_value": -4.143943235474902
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 17.2,
+      "shap_value": -0.9625266170215697
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.0,
+      "shap_value": 3.6379909715184366
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.9,
+      "shap_value": -0.08118149892463584
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 64.4,
+      "shap_value": 2.0438563804527217
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 2.7,
+      "shap_value": 2.164849577080867
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.5,
+      "shap_value": 0.8579932050200446
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 36.0,
+      "shap_value": 0.09690574730733327
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.1,
+      "shap_value": 0.5519240803927411
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.4,
+      "shap_value": 0.7413795136488904
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.3,
+      "shap_value": 3.3955760982480525
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.5,
+      "shap_value": -0.14285813821509413
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 63.4,
+      "shap_value": 2.025694591895305
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.8,
+      "shap_value": 0.749611736298263
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.48,
+      "shap_value": 2.602492668558189
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 36.55,
+      "shap_value": 0.10288166728347525
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.47,
+      "shap_value": -0.22220062044018174
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 14.5,
+      "shap_value": -0.7674962082165236
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.2,
+      "shap_value": 4.32383340194591
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.1,
+      "shap_value": 0.12561961490375825
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 47.8,
+      "shap_value": 0.10848679996704697
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 13.9,
+      "shap_value": -0.6928508633104954
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 46.6,
+      "shap_value": -14.800560757175715
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 22.6,
+      "shap_value": -0.35391287101450214
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 25.0,
+      "shap_value": -3.865507586983168
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.8,
+      "shap_value": 0.6626776121424685
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 17.5,
+      "shap_value": -4.861237265542573
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 28.7,
+      "shap_value": -0.21891897031901458
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 30.1,
+      "shap_value": -3.2231496137460747
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 23.7,
+      "shap_value": -2.088292926354449
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 7.36,
+      "shap_value": -0.27458207549406854
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 43.88,
+      "shap_value": 0.4882045723938081
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.55,
+      "shap_value": -0.0722036528742752
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 3.21,
+      "shap_value": 1.8626678056832224
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.7,
+      "shap_value": 1.5396721666686743
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.8,
+      "shap_value": -0.04418975970364967
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 29.3,
+      "shap_value": -4.079496596135666
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 32.2,
+      "shap_value": -4.039654460177178
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.9,
+      "shap_value": 3.2438891930891236
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 19.42,
+      "shap_value": -0.2942134037683356
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 55.92,
+      "shap_value": 1.2527192010526356
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.76,
+      "shap_value": -3.512764326850955
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 16.41,
+      "shap_value": -5.373312133639146
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.29,
+      "shap_value": 0.1850964256779822
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 40.84,
+      "shap_value": -0.8692476001689794
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.46,
+      "shap_value": 0.7827529996691778
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 35.4,
+      "shap_value": -12.641515876148723
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 23.9,
+      "shap_value": -0.3531262281317523
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 32.9,
+      "shap_value": -2.4387038492918642
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.8,
+      "shap_value": 0.4538816140349911
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.69,
+      "shap_value": 3.641136347052522
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.96,
+      "shap_value": -0.19591905652302477
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 56.34,
+      "shap_value": 1.3673698727821688
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 15.01,
+      "shap_value": -1.3074545101496942
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.07,
+      "shap_value": 1.8520367928765653
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.77,
+      "shap_value": -0.27701577428732255
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.6,
+      "shap_value": -0.3112989202714429
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 19.56,
+      "shap_value": -2.118727493112875
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 30.6,
+      "shap_value": -10.9677357449237
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.9,
+      "shap_value": -0.2656114664145678
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 31.3,
+      "shap_value": -2.902439062758056
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.2,
+      "shap_value": 0.03642545012740907
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 7.7,
+      "shap_value": -0.5586048014065694
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.1,
+      "shap_value": -0.17871035195750135
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.9,
+      "shap_value": -0.23910016538002637
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 15.3,
+      "shap_value": -0.9954519231326475
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 6.6,
+      "shap_value": 0.3107253270600787
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 40.0,
+      "shap_value": 0.19532326198815644
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 41.6,
+      "shap_value": -1.0141149015446382
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.8,
+      "shap_value": -0.2450092686738497
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 39.1,
+      "shap_value": -13.261937639336686
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 24.7,
+      "shap_value": -0.31417639302208383
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 26.9,
+      "shap_value": -3.5467063469944606
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.3,
+      "shap_value": 0.20048310520366955
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 11.1,
+      "shap_value": -2.0639663944168256
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.5,
+      "shap_value": 0.19259797514949553
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 29.2,
+      "shap_value": -3.520264349291654
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 26.2,
+      "shap_value": -2.9195387743142827
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.49,
+      "shap_value": 3.2389497971635994
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.49,
+      "shap_value": 0.13007274732629476
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.38,
+      "shap_value": 0.36707802307159626
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.64,
+      "shap_value": 0.613233179983455
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.3,
+      "shap_value": 3.4009208704732727
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 36.8,
+      "shap_value": 0.08860063378919193
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 49.5,
+      "shap_value": 0.33913971194243986
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.4,
+      "shap_value": -0.04430759697073626
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.0,
+      "shap_value": 3.5308776263455544
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.0,
+      "shap_value": 0.03321025908781895
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.7,
+      "shap_value": 0.988998400021071
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.3,
+      "shap_value": 0.13432244043923025
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.34,
+      "shap_value": 3.3424859237077773
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 28.68,
+      "shap_value": -0.1265166010660574
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 64.63,
+      "shap_value": 2.0522639969883065
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.35,
+      "shap_value": 1.8086881754976025
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.4,
+      "shap_value": 1.6811307095688648
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 36.3,
+      "shap_value": 0.059411616611944836
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.5,
+      "shap_value": 1.0661110815846004
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.8,
+      "shap_value": 1.2243286519488925
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.4,
+      "shap_value": 3.2856613130473145
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 36.3,
+      "shap_value": 0.047074497194589726
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 59.0,
+      "shap_value": 1.6158922243992948
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 2.3,
+      "shap_value": 2.141545022184203
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.65,
+      "shap_value": 2.961546987484705
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.37,
+      "shap_value": -0.10306837225333533
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 51.3,
+      "shap_value": 0.5712313225452466
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 13.68,
+      "shap_value": -0.9326183426822486
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 8.42,
+      "shap_value": -1.251733137181316
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.59,
+      "shap_value": 0.08873855674896179
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 46.85,
+      "shap_value": 0.1604006518336977
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.14,
+      "shap_value": 0.5880073419542471
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 39.1,
+      "shap_value": -13.623850695207784
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.3,
+      "shap_value": -0.1146007286965224
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 21.1,
+      "shap_value": -4.463573046551174
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.5,
+      "shap_value": 0.0717543056161638
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.86,
+      "shap_value": 3.7915722951847646
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.19,
+      "shap_value": 0.11906464518625072
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.3,
+      "shap_value": 0.9049179965758448
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.65,
+      "shap_value": 1.20294962346314
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.31,
+      "shap_value": 3.4074592013001745
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 36.8,
+      "shap_value": 0.08842951570216658
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 49.68,
+      "shap_value": 0.3436356835241399
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.21,
+      "shap_value": 0.00521375392119692
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.5,
+      "shap_value": 3.1855763158543757
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.9,
+      "shap_value": 0.018859275212923656
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 51.0,
+      "shap_value": 0.548915519326432
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.6,
+      "shap_value": -0.12108436244348507
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.55,
+      "shap_value": 3.5126675184430436
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 16.84,
+      "shap_value": -0.22667571378415627
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 60.3,
+      "shap_value": 1.6357020316696966
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 21.31,
+      "shap_value": -3.3569007992089523
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 22.5,
+      "shap_value": -7.7639628686028095
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 28.0,
+      "shap_value": -0.3550164293553073
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 34.2,
+      "shap_value": -2.402224475856583
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 15.3,
+      "shap_value": -0.7135070055844612
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.38,
+      "shap_value": 4.003410043965546
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.81,
+      "shap_value": -0.11345487873183158
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 51.03,
+      "shap_value": 0.5836697378792375
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 15.78,
+      "shap_value": -1.3548076537883003
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.94,
+      "shap_value": 3.496894574743309
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.44,
+      "shap_value": -0.14362350462946286
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 43.23,
+      "shap_value": -0.8528415570284685
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 21.39,
+      "shap_value": -2.6325731394159915
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.52,
+      "shap_value": 3.112683530972092
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.65,
+      "shap_value": -0.07438915717894647
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.64,
+      "shap_value": 1.0616390489109122
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 12.19,
+      "shap_value": -0.4321742007361381
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 15.8,
+      "shap_value": -5.669024589669627
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.9,
+      "shap_value": 0.08027648541539566
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 43.8,
+      "shap_value": -0.4105547212949509
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.5,
+      "shap_value": 1.0664776975976658
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 0.74,
+      "shap_value": 4.359349315704963
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.45,
+      "shap_value": -0.19611357012125316
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 65.23,
+      "shap_value": 2.02197934430647
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.58,
+      "shap_value": 0.8185774979608899
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.7,
+      "shap_value": 2.243015308063911
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 27.9,
+      "shap_value": -0.3783525533195261
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.6,
+      "shap_value": -0.14243912775856557
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.8,
+      "shap_value": -2.8003834911792196
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 27.38,
+      "shap_value": -10.486519719338208
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.28,
+      "shap_value": 0.09292649701100955
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 33.99,
+      "shap_value": -2.439066740079675
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.35,
+      "shap_value": 0.8760849092667707
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 17.84,
+      "shap_value": -6.972807978131211
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 28.36,
+      "shap_value": -0.22617104973550567
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.53,
+      "shap_value": 0.02077812214245497
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.27,
+      "shap_value": 0.43677446220774846
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 14.5,
+      "shap_value": -4.462143707665534
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.8,
+      "shap_value": 0.19176561451521654
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 34.5,
+      "shap_value": -2.4440826977673473
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 15.2,
+      "shap_value": -0.6505021801990665
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.43,
+      "shap_value": 3.8622373454954384
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 27.52,
+      "shap_value": -0.22591874076249044
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 55.52,
+      "shap_value": 1.2502790815087417
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 15.53,
+      "shap_value": -1.448688340444145
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.8,
+      "shap_value": 3.0781227542884313
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.8,
+      "shap_value": 0.13280172806360915
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 52.6,
+      "shap_value": 0.7640915115779539
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.8,
+      "shap_value": 1.3854497499037977
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.85,
+      "shap_value": 3.625134615187557
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.74,
+      "shap_value": -0.042065478935554845
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 58.24,
+      "shap_value": 1.4987525666287584
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.17,
+      "shap_value": 0.9795947555953963
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.0,
+      "shap_value": 3.571232910649126
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.4,
+      "shap_value": -0.006470763682021958
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.6,
+      "shap_value": -0.44973402154830167
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 19.0,
+      "shap_value": -1.9627531095614699
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.1,
+      "shap_value": 1.77679592374978
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.2,
+      "shap_value": -0.13071959211742437
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 58.1,
+      "shap_value": 1.6029358164606653
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.6,
+      "shap_value": 0.5799314464877058
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 17.2,
+      "shap_value": -5.157905958824909
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 28.64,
+      "shap_value": -0.2678698890865494
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 31.94,
+      "shap_value": -3.03111756364651
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.22,
+      "shap_value": -1.904039026806654
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.5,
+      "shap_value": 3.947227480218508
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.5,
+      "shap_value": 0.04940587386760319
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.6,
+      "shap_value": 0.5118099234007516
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 12.4,
+      "shap_value": -0.44646983712690225
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.28,
+      "shap_value": 0.9678012310983537
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 36.87,
+      "shap_value": 0.08906014773063614
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 53.78,
+      "shap_value": 1.1043674044968645
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.07,
+      "shap_value": 1.745461961036027
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.0,
+      "shap_value": 3.5950074205303473
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 37.6,
+      "shap_value": 0.06876515669202289
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 54.8,
+      "shap_value": 1.0523604585952298
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.6,
+      "shap_value": 1.40226057348203
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.1,
+      "shap_value": 3.464954826634823
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 19.3,
+      "shap_value": -0.18641808919546513
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 72.9,
+      "shap_value": 2.1951633343460837
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.7,
+      "shap_value": 1.3471479910516893
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.51,
+      "shap_value": 1.584015701122369
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.18,
+      "shap_value": -0.05038527423128932
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.63,
+      "shap_value": -0.5648238318507802
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 15.68,
+      "shap_value": -1.151285460573026
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.96,
+      "shap_value": 3.586150718879987
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.82,
+      "shap_value": -0.021776729274071163
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 58.33,
+      "shap_value": 1.512289667759808
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.89,
+      "shap_value": 1.0868049486588005
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 23.4,
+      "shap_value": -8.310654559709892
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 28.1,
+      "shap_value": -0.26080634655744867
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 34.6,
+      "shap_value": -2.2707464550969347
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 13.9,
+      "shap_value": -0.4765376367332367
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 0.9,
+      "shap_value": 3.810499540703494
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 20.9,
+      "shap_value": -0.3001574280303584
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 56.0,
+      "shap_value": 1.2724687964688193
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.2,
+      "shap_value": -3.488450464715424
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 6.0,
+      "shap_value": 0.10654299201944799
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.9,
+      "shap_value": -0.04573170421305797
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.6,
+      "shap_value": 0.35150085303257156
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 7.5,
+      "shap_value": 0.6837752545070765
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.3,
+      "shap_value": 3.043427959032181
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.3,
+      "shap_value": -0.23504743759043162
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 56.7,
+      "shap_value": 1.3073291211745346
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 14.7,
+      "shap_value": -1.3856461712323154
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 30.5,
+      "shap_value": -11.275797723232149
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 29.4,
+      "shap_value": -0.1137887528984613
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 34.6,
+      "shap_value": -2.0969379171616755
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.5,
+      "shap_value": 0.8476075645711463
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.4,
+      "shap_value": 4.273216389187194
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 19.6,
+      "shap_value": -0.1381617206034467
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 77.0,
+      "shap_value": 2.4196548781965905
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 2.0,
+      "shap_value": 2.5161377344305778
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 20.5,
+      "shap_value": -7.630192011947021
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.0,
+      "shap_value": 0.03670660277349541
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 39.6,
+      "shap_value": -1.175745864353991
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.9,
+      "shap_value": 0.6038260015084508
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 16.1,
+      "shap_value": -5.54785463703324
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.4,
+      "shap_value": 0.19498112073691548
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 33.59,
+      "shap_value": -3.057282648906233
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.91,
+      "shap_value": 0.023638183302580155
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.8,
+      "shap_value": 3.0930526026222185
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.0,
+      "shap_value": 0.17431136075923148
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 46.5,
+      "shap_value": -0.14532713168953756
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 11.7,
+      "shap_value": -0.0970485280498569
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.46,
+      "shap_value": 0.6917430828697073
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.72,
+      "shap_value": 0.14333890618884051
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 49.19,
+      "shap_value": 0.313262196625438
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.63,
+      "shap_value": 1.2271479695116618
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 22.85,
+      "shap_value": -8.950733947159405
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.1,
+      "shap_value": -0.044754771995691604
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.27,
+      "shap_value": 0.10174431793564266
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 1.78,
+      "shap_value": 1.3387417711882512
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 28.0,
+      "shap_value": -10.632125088764003
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 29.4,
+      "shap_value": -0.2134962047734554
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 38.7,
+      "shap_value": -1.0583799207636335
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 3.9,
+      "shap_value": 1.101230422130658
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.2,
+      "shap_value": 3.3437864948590885
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.5,
+      "shap_value": -0.15391001750378194
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 41.5,
+      "shap_value": -1.2980900682131664
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.8,
+      "shap_value": -2.9964836027017467
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 40.42,
+      "shap_value": -12.885541768237287
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 28.41,
+      "shap_value": -0.174555091008609
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 14.01,
+      "shap_value": -4.386021438630496
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 17.16,
+      "shap_value": -0.9749280606876414
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 3.03,
+      "shap_value": 2.825027439759588
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 29.34,
+      "shap_value": -0.11678386396485047
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 58.97,
+      "shap_value": 1.8418949309475534
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.66,
+      "shap_value": 0.44250401803179085
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 17.5,
+      "shap_value": -6.9282306558416
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.4,
+      "shap_value": 0.05806932078767766
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 44.1,
+      "shap_value": -0.3430463075912961
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.0,
+      "shap_value": 1.2109151579656534
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 0.7,
+      "shap_value": 3.9871942451685594
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 22.1,
+      "shap_value": -0.1856512365475556
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 58.2,
+      "shap_value": 1.6034167962917052
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 19.0,
+      "shap_value": -2.599743023307411
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.03,
+      "shap_value": 3.6936200186442036
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.59,
+      "shap_value": -0.07135125353386773
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 63.26,
+      "shap_value": 1.9973083445686886
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.12,
+      "shap_value": 2.0151306088598893
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.3,
+      "shap_value": 3.2914171400305965
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.0,
+      "shap_value": -0.014230787165485747
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 54.5,
+      "shap_value": 1.1413644985630107
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.2,
+      "shap_value": 0.14273165961295065
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 13.0,
+      "shap_value": -5.083557378346343
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 23.4,
+      "shap_value": -0.3152590063771086
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 57.7,
+      "shap_value": 1.7333360657687231
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.9,
+      "shap_value": 1.3264000188484941
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 34.3,
+      "shap_value": -12.243367497805059
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 26.1,
+      "shap_value": -0.2421300524784144
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 31.1,
+      "shap_value": -2.8219769034715303
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.5,
+      "shap_value": 0.38963736292044043
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.8,
+      "shap_value": 4.034067327715649
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.3,
+      "shap_value": 0.09611615368323453
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 38.2,
+      "shap_value": -1.6528571940781804
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 25.7,
+      "shap_value": -3.4329479418174516
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.15,
+      "shap_value": 4.2654679446290995
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 34.71,
+      "shap_value": 0.00432903057755691
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 59.94,
+      "shap_value": 1.7200305930534299
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.2,
+      "shap_value": 1.8752038199593082
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.66,
+      "shap_value": 2.9894431087765634
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.57,
+      "shap_value": -0.25423204363094887
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 47.05,
+      "shap_value": 0.015197188487989004
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 19.72,
+      "shap_value": -2.214676546280268
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 6.32,
+      "shap_value": 0.16974629927748325
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.43,
+      "shap_value": -0.037832146513268876
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.92,
+      "shap_value": -0.23123291958481668
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 12.33,
+      "shap_value": -0.565247449130927
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 4.2,
+      "shap_value": 1.7725578136037259
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.04,
+      "shap_value": -0.03805850505924658
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 46.76,
+      "shap_value": -0.17039668386757761
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 14.0,
+      "shap_value": -0.821555253879218
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 11.6,
+      "shap_value": -2.5289355714645643
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 32.3,
+      "shap_value": 0.0468314255917651
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 33.2,
+      "shap_value": -2.9175911134112043
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 22.9,
+      "shap_value": -2.2445674149021615
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 41.99,
+      "shap_value": -14.10438727880413
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 24.85,
+      "shap_value": -0.2697979169909561
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 27.93,
+      "shap_value": -3.414604253637027
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.23,
+      "shap_value": 0.8145831936327627
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 6.2,
+      "shap_value": 0.45573972210359087
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 41.0,
+      "shap_value": 0.27418016383192845
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 47.6,
+      "shap_value": 0.17467983058229775
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 5.2,
+      "shap_value": 1.5042541103749703
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.4,
+      "shap_value": 3.362630336944863
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 39.7,
+      "shap_value": 0.17079374742087314
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 49.9,
+      "shap_value": 0.321433274878777
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 8.0,
+      "shap_value": 0.8060711285889463
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.43,
+      "shap_value": 3.7714608769312328
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.84,
+      "shap_value": -0.1873612248615516
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 46.55,
+      "shap_value": -0.08030827438233266
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 20.18,
+      "shap_value": -2.4542709869787727
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.56,
+      "shap_value": 3.2676999103777886
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 40.97,
+      "shap_value": 0.24057892144459722
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 47.08,
+      "shap_value": -0.09210351710435934
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.39,
+      "shap_value": 0.48124754885504795
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 13.8,
+      "shap_value": -4.676647637148142
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.4,
+      "shap_value": -0.17396022790055535
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 45.1,
+      "shap_value": -0.07424374604721361
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 9.7,
+      "shap_value": 0.4011175319230513
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.23,
+      "shap_value": 1.1348905563574565
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 33.44,
+      "shap_value": -0.14765537615134056
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 43.48,
+      "shap_value": -0.7308979776466786
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 17.85,
+      "shap_value": -1.6751989425568192
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.21,
+      "shap_value": 3.3257773219679114
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.72,
+      "shap_value": -0.12720914858543653
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 48.22,
+      "shap_value": 0.14847916608562925
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 17.85,
+      "shap_value": -1.8658993689094228
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 7.1,
+      "shap_value": -0.028448285385829664
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.8,
+      "shap_value": 0.18467055198831625
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 43.3,
+      "shap_value": -0.6269815669398069
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 10.8,
+      "shap_value": 0.10469127983543916
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.18,
+      "shap_value": 4.255058550322895
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.46,
+      "shap_value": -0.09886305675977675
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 62.01,
+      "shap_value": 1.895563763403698
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 6.35,
+      "shap_value": 1.234091286592315
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 2.0,
+      "shap_value": 3.410355120695009
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 30.5,
+      "shap_value": -0.12395856127610287
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 55.0,
+      "shap_value": 1.209773939277731
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 12.5,
+      "shap_value": -0.6341624014504799
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 1.74,
+      "shap_value": 3.7658534388700526
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 31.73,
+      "shap_value": -0.059348545649064846
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 62.4,
+      "shap_value": 1.8307293123814452
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.13,
+      "shap_value": 1.8995997904396533
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 5.3,
+      "shap_value": 1.4142496998251919
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 35.7,
+      "shap_value": 0.050805637607763875
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 41.8,
+      "shap_value": -0.9112794170328647
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 17.2,
+      "shap_value": -1.2727800032592482
+    },
+    {
+      "feature": "Moisture",
+      "feature_value": 7.2,
+      "shap_value": -0.6402097189677749
+    },
+    {
+      "feature": "Volatile_matter",
+      "feature_value": 38.4,
+      "shap_value": 0.1402530545163333
+    },
+    {
+      "feature": "Fixed_Carbon",
+      "feature_value": 50.2,
+      "shap_value": 0.5652213611975426
+    },
+    {
+      "feature": "Std.Ash",
+      "feature_value": 4.2,
+      "shap_value": 1.5502188913153114
+    }
+  ]
+}
