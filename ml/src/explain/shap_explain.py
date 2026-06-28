@@ -51,16 +51,16 @@ def explain_single_prediction(explainer, X_row: np.ndarray, feature_names: list[
     }
 
 
-def generate_explanation_sentence(contributions: list[dict], top_n: int = 3) -> str:
+def generate_explanation_sentence(contributions: list[dict], top_n: int = 3, unit: str = "MJ/kg") -> str:
     increasing = [c for c in contributions if c["shap_value"] > 0][:top_n]
     decreasing = [c for c in contributions if c["shap_value"] < 0][:top_n]
 
     parts = []
     if increasing:
-        described = ", ".join(f"{c['feature']} ({c['shap_value']:+.2f} MJ/kg)" for c in increasing)
+        described = ", ".join(f"{c['feature']} ({c['shap_value']:+.2f} {unit})" for c in increasing)
         parts.append(f"{described} increased the predicted GCV")
     if decreasing:
-        described = ", ".join(f"{c['feature']} ({c['shap_value']:+.2f} MJ/kg)" for c in decreasing)
+        described = ", ".join(f"{c['feature']} ({c['shap_value']:+.2f} {unit})" for c in decreasing)
         parts.append(f"{described} decreased it")
 
     if not parts:

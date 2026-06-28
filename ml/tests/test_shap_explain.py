@@ -59,3 +59,14 @@ def test_generate_explanation_sentence_mentions_increasing_and_decreasing_featur
     assert "Std.Ash" in sentence
     assert "increased" in sentence
     assert "decreased" in sentence
+    assert "MJ/kg" in sentence
+
+
+def test_generate_explanation_sentence_uses_custom_unit():
+    contributions = [
+        {"feature": "Fixed_Carbon", "value": 40.0, "shap_value": 2.3},
+        {"feature": "Std.Ash", "value": 23.0, "shap_value": -3.0},
+    ]
+    sentence = generate_explanation_sentence(contributions, unit="kcal/kg")
+    assert "kcal/kg" in sentence
+    assert "MJ/kg" not in sentence

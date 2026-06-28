@@ -20,6 +20,8 @@ from src.models.confidence import compute_confidence  # noqa: E402
 
 BEST_MODEL_PATH = APP_DIR / "models" / "best_model.joblib"
 
+KCAL_PER_MJ = 1000 / 4.1868  # GCV is predicted in MJ/kg; coal industry conventionally reports kcal/kg
+
 DEFAULTS = {
     "Moisture": 5.20,
     "Volatile_matter": 31.10,
@@ -95,20 +97,25 @@ if predict_clicked:
     if artifact["scaler"] is not None:
         model_input = artifact["scaler"].transform(feature_vector.reshape(1, -1))[0]
 
-    prediction = float(artifact["estimator"].predict(model_input.reshape(1, -1))[0])
+    prediction_mj = float(artifact["estimator"].predict(model_input.reshape(1, -1))[0])
+    prediction_kcal = prediction_mj * KCAL_PER_MJ
     confidence = compute_confidence(artifact, raw_input)
 
     explainer = load_explainer(artifact)
     explanation = explain_single_prediction(explainer, model_input, FEATURE_COLUMNS, raw_input)
-    sentence = generate_explanation_sentence(explanation["contributions"])
+    contributions_kcal = [
+        {**contribution, "shap_value": contribution["shap_value"] * KCAL_PER_MJ}
+        for contribution in explanation["contributions"]
+    ]
+    sentence = generate_explanation_sentence(contributions_kcal, unit="kcal/kg")
 
     st.divider()
     result_col1, result_col2 = st.columns(2)
-    result_col1.metric("Predicted GCV", f"{prediction:.2f} MJ/kg")
+    result_col1.metric("Predicted GCV", f"{prediction_kcal:,.0f} kcal/kg")
     result_col2.metric("Confidence", f"{confidence:.0f}%")
 
     st.subheader("Why this prediction?")
     st.write(sentence)
 
-    contributions_df = pd.DataFrame(explanation["contributions"]).set_index("feature")["shap_value"]
+    contributions_df = pd.DataFrame(contributions_kcal).set_index("feature")["shap_value"]
     st.bar_chart(contributions_df)
