@@ -1,0 +1,41 @@
+{
+  "raw_row_count": 4540,
+  "rows_failed_validation": 0,
+  "validation_errors": [],
+  "duplicates_removed": 27,
+  "rows_after_cleaning": 4513,
+  "missing_values_imputed": {
+    "Moisture": 0,
+    "Volatile_matter": 0,
+    "Fixed_Carbon": 0,
+    "Std.Ash": 0,
+    "GCV": 0
+  },
+  "outliers": {
+    "Moisture": {
+      "lower_bound": -8.45,
+      "upper_bound": 19.950000000000003,
+      "count": 560
+    },
+    "Volatile_matter": {
+      "lower_bound": 17.955000000000002,
+      "upper_bound": 47.675,
+      "count": 146
+    },
+    "Fixed_Carbon": {
+      "lower_bound": 23.395000000000007,
+      "upper_bound": 74.875,
+      "count": 132
+    },
+    "Std.Ash": {
+      "lower_bound": -5.075000000000001,
+      "upper_bound": 25.525000000000002,
+      "count": 127
+    },
+    "GCV": {
+      "lower_bound": 11.416770769999996,
+      "upper_bound": 41.41772445000001,
+      "count": 268
+    }
+  }
+}
