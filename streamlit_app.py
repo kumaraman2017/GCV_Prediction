@@ -18,9 +18,9 @@ from src.explain.shap_explain import (  # noqa: E402
     explain_single_prediction,
     generate_explanation_sentence,
 )
-from src.models.confidence import compute_confidence  # noqa: E402
+from src.models.confidence import compute_confidence_interval  # noqa: E402
 
-from ui.charts import confidence_gauge, shap_waterfall  # noqa: E402
+from ui.charts import confidence_interval_chart, shap_waterfall  # noqa: E402
 from ui.components import (  # noqa: E402
     render_feature_input,
     render_footer,
@@ -116,7 +116,9 @@ if predict_clicked:
 
     prediction_mj = float(artifact["estimator"].predict(model_input.reshape(1, -1))[0])
     prediction_kcal = prediction_mj * KCAL_PER_MJ
-    confidence = compute_confidence(artifact, raw_input)
+    interval_low_mj, interval_high_mj = compute_confidence_interval(artifact, raw_input, prediction_mj)
+    interval_low_kcal = interval_low_mj * KCAL_PER_MJ
+    interval_high_kcal = interval_high_mj * KCAL_PER_MJ
 
     explainer = load_explainer(artifact)
     explanation = explain_single_prediction(explainer, model_input, FEATURE_COLUMNS, raw_input)
@@ -134,7 +136,11 @@ if predict_clicked:
         render_kpi_card("🔥", "Predicted GCV", f"{prediction_kcal:,.0f}", "kcal/kg")
     with kpi_col2:
         with st.container(key="card-gauge"):
-            st.plotly_chart(confidence_gauge(confidence, theme), use_container_width=True, config={"displayModeBar": False})
+            st.markdown('<div class="slider-label">90% Confidence Interval</div>', unsafe_allow_html=True)
+            interval_fig = confidence_interval_chart(
+                interval_low_kcal, interval_high_kcal, prediction_kcal, "kcal/kg", theme
+            )
+            st.plotly_chart(interval_fig, use_container_width=True, config={"displayModeBar": False})
     with kpi_col3:
         render_kpi_card("📐", "Model RMSE", f"± {rmse_kcal:,.0f}", f"{metadata['model_name']}, test set")
 

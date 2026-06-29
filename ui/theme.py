@@ -74,17 +74,3 @@ GOOGLE_FONTS_URL = (
 
 def get_theme(name: str) -> Theme:
     return LIGHT if name == "light" else DARK
-
-
-def confidence_color(theme: Theme, confidence: float) -> str:
-    if confidence >= 70:
-        return theme.success
-    if confidence >= 40:
-        return theme.warning
-    return theme.error
-
-
-def hex_to_rgba(hex_color: str, alpha: float) -> str:
-    hex_color = hex_color.lstrip("#")
-    r, g, b = (int(hex_color[i : i + 2], 16) for i in (0, 2, 4))
-    return f"rgba({r}, {g}, {b}, {alpha})"

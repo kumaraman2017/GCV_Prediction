@@ -1,6 +1,6 @@
 import plotly.graph_objects as go
 
-from ui.theme import FONT_BODY, Theme, confidence_color, hex_to_rgba
+from ui.theme import FONT_BODY, FONT_DISPLAY, Theme
 
 
 def _transparent_layout(fig: go.Figure, theme: Theme, height: int) -> go.Figure:
@@ -14,27 +14,40 @@ def _transparent_layout(fig: go.Figure, theme: Theme, height: int) -> go.Figure:
     return fig
 
 
-def confidence_gauge(confidence: float, theme: Theme) -> go.Figure:
-    color = confidence_color(theme, confidence)
-    fig = go.Figure(
-        go.Indicator(
-            mode="gauge+number",
-            value=confidence,
-            number={"suffix": "%", "font": {"size": 34, "color": theme.text_primary}},
-            gauge={
-                "axis": {"range": [0, 100], "tickcolor": theme.text_muted, "tickfont": {"size": 10}},
-                "bar": {"color": color, "thickness": 0.28},
-                "bgcolor": "rgba(0,0,0,0)",
-                "borderwidth": 0,
-                "steps": [
-                    {"range": [0, 40], "color": hex_to_rgba(theme.error, 0.12)},
-                    {"range": [40, 70], "color": hex_to_rgba(theme.warning, 0.12)},
-                    {"range": [70, 100], "color": hex_to_rgba(theme.success, 0.12)},
-                ],
-            },
+def confidence_interval_chart(low: float, high: float, prediction: float, unit: str, theme: Theme) -> go.Figure:
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x=[low, high],
+            y=[0, 0],
+            mode="lines",
+            line={"color": theme.accent_blue, "width": 10},
+            hoverinfo="skip",
         )
     )
-    return _transparent_layout(fig, theme, height=200)
+    fig.add_trace(
+        go.Scatter(
+            x=[prediction],
+            y=[0],
+            mode="markers",
+            marker={"size": 18, "color": theme.accent_cyan, "line": {"width": 2, "color": "white"}},
+            hoverinfo="skip",
+        )
+    )
+    for x_value in (low, high):
+        fig.add_annotation(
+            x=x_value, y=0, yshift=26, showarrow=False,
+            text=f"{x_value:,.0f}", font={"size": 12, "color": theme.text_secondary},
+        )
+    fig.add_annotation(
+        x=prediction, y=0, yshift=-26, showarrow=False,
+        text=f"{prediction:,.0f} {unit}",
+        font={"size": 13, "color": theme.text_primary, "family": FONT_DISPLAY},
+    )
+    fig.update_yaxes(visible=False, range=[-1, 1], fixedrange=True)
+    fig.update_xaxes(visible=False, fixedrange=True, range=[low - (high - low) * 0.15, high + (high - low) * 0.15])
+    fig.update_layout(showlegend=False)
+    return _transparent_layout(fig, theme, height=140)
 
 
 def shap_waterfall(contributions: list[dict], base_value: float, prediction: float, unit: str, theme: Theme) -> go.Figure:

@@ -3,7 +3,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 
-from src.models.confidence import _extrapolation_penalty, compute_confidence
+from src.models.confidence import _extrapolation_penalty, compute_confidence, compute_confidence_interval
 
 FEATURE_COLUMNS = ["Moisture", "Volatile_matter", "Fixed_Carbon", "Std.Ash"]
 
@@ -77,3 +77,43 @@ def test_extrapolation_penalty_below_one_when_out_of_range():
     raw_input = {"Moisture": 100.0, "Volatile_matter": 20.0, "Fixed_Carbon": 30.0, "Std.Ash": 25.0}
     penalty = _extrapolation_penalty(raw_input, feature_ranges)
     assert 0.5 <= penalty < 1.0
+
+
+def test_confidence_interval_contains_prediction():
+    X, y = _synthetic_training_data()
+    estimator = RandomForestRegressor(n_estimators=20, random_state=42).fit(X, y)
+    artifact = _base_artifact(estimator, X, y, "bagging_ensemble")
+    raw_input = _sample_input(X)
+    prediction = float(estimator.predict(X[0].reshape(1, -1))[0])
+
+    low, high = compute_confidence_interval(artifact, raw_input, prediction)
+    assert low <= prediction <= high
+
+
+def test_confidence_interval_widens_for_out_of_range_input():
+    X, y = _synthetic_training_data()
+    estimator = RandomForestRegressor(n_estimators=20, random_state=42).fit(X, y)
+    artifact = _base_artifact(estimator, X, y, "bagging_ensemble")
+    prediction = float(estimator.predict(X[0].reshape(1, -1))[0])
+
+    in_range_input = _sample_input(X)
+    out_of_range_input = dict(in_range_input)
+    out_of_range_input["Moisture"] = artifact["feature_ranges"]["Moisture"][1] + 50.0
+
+    in_range_low, in_range_high = compute_confidence_interval(artifact, in_range_input, prediction)
+    out_of_range_low, out_of_range_high = compute_confidence_interval(artifact, out_of_range_input, prediction)
+
+    assert (out_of_range_high - out_of_range_low) > (in_range_high - in_range_low)
+
+
+def test_confidence_interval_larger_z_widens_interval():
+    X, y = _synthetic_training_data()
+    estimator = LinearRegression().fit(X, y)
+    artifact = _base_artifact(estimator, X, y, "knn_residual")
+    raw_input = _sample_input(X)
+    prediction = float(estimator.predict(X[0].reshape(1, -1))[0])
+
+    narrow_low, narrow_high = compute_confidence_interval(artifact, raw_input, prediction, z=1.0)
+    wide_low, wide_high = compute_confidence_interval(artifact, raw_input, prediction, z=2.0)
+
+    assert (wide_high - wide_low) > (narrow_high - narrow_low)
