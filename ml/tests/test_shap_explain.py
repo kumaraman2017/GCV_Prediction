@@ -1,4 +1,5 @@
 import numpy as np
+from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 
 from src.explain.shap_explain import (
@@ -20,9 +21,30 @@ def _fit_model():
     return model, X, y
 
 
+def _fit_linear_model():
+    rng = np.random.RandomState(0)
+    X = rng.uniform(5, 40, size=(100, 4))
+    y = X[:, 0] * 0.3 + X[:, 1] * 0.5 - X[:, 2] * 0.2 + X[:, 3] * 0.1
+    model = LinearRegression().fit(X, y)
+    return model, X, y
+
+
 def test_shap_values_sum_to_prediction_minus_base_value():
     model, X, y = _fit_model()
     explainer = build_explainer(is_tree_based=True, estimator=model, background=X)
+    raw_values = {name: float(X[0, idx]) for idx, name in enumerate(FEATURE_COLUMNS)}
+
+    result = explain_single_prediction(explainer, X[0], FEATURE_COLUMNS, raw_values)
+    actual_prediction = float(model.predict(X[0].reshape(1, -1))[0])
+
+    shap_sum = sum(c["shap_value"] for c in result["contributions"])
+    assert abs(result["base_value"] + shap_sum - actual_prediction) < 1e-4
+    assert abs(result["prediction"] - actual_prediction) < 1e-4
+
+
+def test_shap_values_sum_to_prediction_minus_base_value_for_linear_explainer():
+    model, X, y = _fit_linear_model()
+    explainer = build_explainer(is_tree_based=False, estimator=model, background=X)
     raw_values = {name: float(X[0, idx]) for idx, name in enumerate(FEATURE_COLUMNS)}
 
     result = explain_single_prediction(explainer, X[0], FEATURE_COLUMNS, raw_values)

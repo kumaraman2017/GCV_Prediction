@@ -1,6 +1,8 @@
 import numpy as np
+import pytest
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeRegressor
 
 from src.models.confidence import _extrapolation_penalty, compute_confidence, compute_confidence_interval
@@ -77,6 +79,46 @@ def test_extrapolation_penalty_below_one_when_out_of_range():
     raw_input = {"Moisture": 100.0, "Volatile_matter": 20.0, "Fixed_Carbon": 30.0, "Std.Ash": 25.0}
     penalty = _extrapolation_penalty(raw_input, feature_ranges)
     assert 0.5 <= penalty < 1.0
+
+
+def test_knn_residual_confidence_with_scaler_in_valid_range():
+    X, y = _synthetic_training_data()
+    scaler = StandardScaler().fit(X)
+    X_scaled = scaler.transform(X)
+    estimator = LinearRegression().fit(X_scaled, y)
+    residuals = y - estimator.predict(X_scaled)
+    artifact = {
+        "feature_columns": FEATURE_COLUMNS,
+        "scaler": scaler,
+        "confidence_method": "knn_residual",
+        "estimator": estimator,
+        "X_train": X_scaled,
+        "y_train": y,
+        "residuals_train": residuals,
+        "residual_std": float(residuals.std()),
+        "feature_ranges": _feature_ranges(X),
+    }
+    score = compute_confidence(artifact, _sample_input(X))
+    assert 0.0 <= score <= 100.0
+
+
+def test_compute_confidence_raises_for_unknown_method():
+    X, y = _synthetic_training_data()
+    estimator = LinearRegression().fit(X, y)
+    artifact = _base_artifact(estimator, X, y, "bogus_method")
+    with pytest.raises(ValueError):
+        compute_confidence(artifact, _sample_input(X))
+
+
+def test_extrapolation_penalty_compounds_for_multiple_out_of_range_features():
+    feature_ranges = {col: (0.0, 50.0) for col in FEATURE_COLUMNS}
+    single_out_of_range = {"Moisture": 100.0, "Volatile_matter": 20.0, "Fixed_Carbon": 30.0, "Std.Ash": 25.0}
+    multiple_out_of_range = {"Moisture": 100.0, "Volatile_matter": 100.0, "Fixed_Carbon": 30.0, "Std.Ash": 25.0}
+
+    single_penalty = _extrapolation_penalty(single_out_of_range, feature_ranges)
+    multiple_penalty = _extrapolation_penalty(multiple_out_of_range, feature_ranges)
+
+    assert multiple_penalty < single_penalty
 
 
 def test_confidence_interval_contains_prediction():
