@@ -1,3 +1,4 @@
+import json
 import sys
 from pathlib import Path
 
@@ -10,7 +11,7 @@ APP_DIR = Path(__file__).resolve().parent
 ML_DIR = APP_DIR / "ml"
 sys.path.insert(0, str(ML_DIR))
 
-from src.config import CLEAN_DATA_PATH, FEATURE_COLUMNS  # noqa: E402
+from src.config import CLEAN_DATA_PATH, FEATURE_COLUMNS, MODEL_METADATA_PATH  # noqa: E402
 from src.explain.shap_explain import (  # noqa: E402
     build_explainer,
     explain_single_prediction,
@@ -45,6 +46,11 @@ def load_explainer(_artifact):
 @st.cache_data
 def load_clean_dataset():
     return pd.read_csv(CLEAN_DATA_PATH)
+
+
+@st.cache_data
+def load_metadata():
+    return json.loads(MODEL_METADATA_PATH.read_text())
 
 
 def reset_inputs():
@@ -109,10 +115,18 @@ if predict_clicked:
     ]
     sentence = generate_explanation_sentence(contributions_kcal, unit="kcal/kg")
 
+    metadata = load_metadata()
+    rmse_kcal = metadata["metrics"]["rmse"] * KCAL_PER_MJ
+
     st.divider()
-    result_col1, result_col2 = st.columns(2)
+    result_col1, result_col2, result_col3 = st.columns(3)
     result_col1.metric("Predicted GCV", f"{prediction_kcal:,.0f} kcal/kg")
     result_col2.metric("Confidence", f"{confidence:.0f}%")
+    result_col3.metric(
+        "Model RMSE",
+        f"± {rmse_kcal:,.0f} kcal/kg",
+        help=f"Typical error of the {metadata['model_name']} model on held-out test data — not specific to this prediction.",
+    )
 
     st.subheader("Why this prediction?")
     st.write(sentence)
