@@ -10,6 +10,7 @@ import streamlit as st
 APP_DIR = Path(__file__).resolve().parent
 ML_DIR = APP_DIR / "ml"
 sys.path.insert(0, str(ML_DIR))
+sys.path.insert(0, str(APP_DIR))
 
 from src.config import CLEAN_DATA_PATH, FEATURE_COLUMNS, MODEL_METADATA_PATH  # noqa: E402
 from src.explain.shap_explain import (  # noqa: E402
@@ -19,7 +20,19 @@ from src.explain.shap_explain import (  # noqa: E402
 )
 from src.models.confidence import compute_confidence  # noqa: E402
 
+from ui.charts import confidence_gauge, shap_waterfall  # noqa: E402
+from ui.components import (  # noqa: E402
+    render_feature_input,
+    render_footer,
+    render_header,
+    render_kpi_card,
+    render_sum_pill,
+)
+from ui.styles import inject_global_css  # noqa: E402
+from ui.theme import get_theme  # noqa: E402
+
 BEST_MODEL_PATH = APP_DIR / "models" / "best_model.joblib"
+REPO_URL = "https://github.com/kumaraman2017/GCV_Prediction"
 
 KCAL_PER_MJ = 1000 / 4.1868  # GCV is predicted in MJ/kg; coal industry conventionally reports kcal/kg
 
@@ -68,32 +81,30 @@ def load_example():
 for column, value in DEFAULTS.items():
     st.session_state.setdefault(column, value)
 
-st.title("Coal GCV Predictor")
-st.caption(
-    "Predicts Gross Calorific Value (GCV) from proximate analysis "
-    "(Moisture, Volatile Matter, Fixed Carbon, Ash), with a confidence "
-    "score and a SHAP-based explanation of the prediction."
-)
+dark_mode = st.session_state.get("dark_mode_toggle", True)
+theme = get_theme("dark" if dark_mode else "light")
+inject_global_css(theme)
 
-input_col1, input_col2 = st.columns(2)
-with input_col1:
-    st.number_input("Moisture (%)", min_value=0.0, max_value=100.0, step=0.1, key="Moisture")
-    st.number_input("Volatile Matter (%)", min_value=0.0, max_value=100.0, step=0.1, key="Volatile_matter")
-with input_col2:
-    st.number_input("Fixed Carbon (%)", min_value=0.0, max_value=100.0, step=0.1, key="Fixed_Carbon")
-    st.number_input("Ash (%)", min_value=0.0, max_value=100.0, step=0.1, key="Std.Ash")
+render_header(theme)
+
+st.markdown('<p class="section-heading">Proximate Analysis</p>', unsafe_allow_html=True)
+slider_col1, slider_col2 = st.columns(2)
+with slider_col1:
+    render_feature_input("💧", "Moisture", "Moisture")
+    render_feature_input("💨", "Volatile Matter", "Volatile_matter")
+with slider_col2:
+    render_feature_input("⚡", "Fixed Carbon", "Fixed_Carbon")
+    render_feature_input("🪨", "Ash", "Std.Ash")
 
 raw_input = {column: float(st.session_state[column]) for column in FEATURE_COLUMNS}
 total = sum(raw_input.values())
-if abs(total - 100.0) <= 0.5:
-    st.caption(f"Sum of inputs: {total:.1f}% ✅")
-else:
-    st.caption(f"Sum of inputs: {total:.1f}% ⚠️ — proximate analysis values normally sum to ~100%.")
+render_sum_pill(total, theme)
 
-button_col1, button_col2, button_col3 = st.columns(3)
-predict_clicked = button_col1.button("Predict", type="primary", use_container_width=True)
-button_col2.button("Reset", on_click=reset_inputs, use_container_width=True)
-button_col3.button("Load example", on_click=load_example, use_container_width=True)
+with st.container(key="card-actions"):
+    button_col1, button_col2, button_col3 = st.columns(3)
+    predict_clicked = button_col1.button("Predict", type="primary", use_container_width=True)
+    button_col2.button("Reset", on_click=reset_inputs, use_container_width=True)
+    button_col3.button("Load example", on_click=load_example, use_container_width=True)
 
 if predict_clicked:
     artifact = load_artifact()
@@ -118,18 +129,20 @@ if predict_clicked:
     metadata = load_metadata()
     rmse_kcal = metadata["metrics"]["rmse"] * KCAL_PER_MJ
 
-    st.divider()
-    result_col1, result_col2, result_col3 = st.columns(3)
-    result_col1.metric("Predicted GCV", f"{prediction_kcal:,.0f} kcal/kg")
-    result_col2.metric("Confidence", f"{confidence:.0f}%")
-    result_col3.metric(
-        "Model RMSE",
-        f"± {rmse_kcal:,.0f} kcal/kg",
-        help=f"Typical error of the {metadata['model_name']} model on held-out test data — not specific to this prediction.",
-    )
+    kpi_col1, kpi_col2, kpi_col3 = st.columns(3)
+    with kpi_col1:
+        render_kpi_card("🔥", "Predicted GCV", f"{prediction_kcal:,.0f}", "kcal/kg")
+    with kpi_col2:
+        with st.container(key="card-gauge"):
+            st.plotly_chart(confidence_gauge(confidence, theme), use_container_width=True, config={"displayModeBar": False})
+    with kpi_col3:
+        render_kpi_card("📐", "Model RMSE", f"± {rmse_kcal:,.0f}", f"{metadata['model_name']}, test set")
 
-    st.subheader("Why this prediction?")
-    st.write(sentence)
+    with st.container(key="card-explain"):
+        st.markdown('<p class="section-heading">Why this prediction?</p>', unsafe_allow_html=True)
+        st.markdown(f'<p class="explain-sentence">{sentence}</p>', unsafe_allow_html=True)
+        base_value_kcal = explanation["base_value"] * KCAL_PER_MJ
+        fig = shap_waterfall(contributions_kcal, base_value_kcal, prediction_kcal, "kcal/kg", theme)
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-    contributions_df = pd.DataFrame(contributions_kcal).set_index("feature")["shap_value"]
-    st.bar_chart(contributions_df)
+render_footer(REPO_URL)
