@@ -1,0 +1,193 @@
+- generic:
+  - generic [ref=f3e3]:
+    - banner [ref=f3e6]:
+      - button "Deploy" [ref=f3e11] [cursor=pointer]:
+        - generic [ref=f3e13]: Deploy
+    - generic [ref=f3e14]:
+      - generic [ref=f3e16]:
+        - generic [ref=f3e24]:
+          - generic [ref=f3e25]: ⛏️
+          - heading "COAL GCV PREDICTOR" [level=1] [ref=f3e27]:
+            - text: COAL GCV PREDICTOR
+            - generic [ref=f3e28]:
+              - link "Link to heading":
+                - /url: "#coal-gcv-predictor"
+                - img
+        - generic [ref=f3e36]: Model Online
+        - generic [ref=f3e42] [cursor=pointer]:
+          - checkbox "🌙" [checked]
+      - paragraph [ref=f3e49]: Predicts Gross Calorific Value from proximate analysis — Moisture, Volatile Matter, Fixed Carbon, and Ash — with a per-prediction confidence score and a SHAP-based explanation.
+      - paragraph [ref=f3e54]: Proximate Analysis
+      - generic [ref=f3e56]:
+        - generic [ref=f3e58]:
+          - generic [ref=f3e60]:
+            - generic [ref=f3e64]:
+              - generic [ref=f3e65]:
+                - generic [ref=f3e66]: 💧
+                - generic [ref=f3e67]: Moisture
+              - generic [ref=f3e68]:
+                - generic [ref=f3e69]: "5.2"
+                - generic [ref=f3e70]: "%"
+            - generic [ref=f3e72]:
+              - button "−" [ref=f3e79] [cursor=pointer]:
+                - paragraph [ref=f3e83]: −
+              - slider "Moisture" [ref=f3e93]:
+                - generic:
+                  - generic:
+                    - paragraph: "5.20"
+              - button "+" [ref=f3e101] [cursor=pointer]:
+                - paragraph [ref=f3e105]: +
+            - generic [ref=f3e107]:
+              - generic [ref=f3e108]: 0%
+              - generic [ref=f3e109]: 100%
+          - generic [ref=f3e111]:
+            - generic [ref=f3e115]:
+              - generic [ref=f3e116]:
+                - generic [ref=f3e117]: 💨
+                - generic [ref=f3e118]: Volatile Matter
+              - generic [ref=f3e119]:
+                - generic [ref=f3e120]: "31.1"
+                - generic [ref=f3e121]: "%"
+            - generic [ref=f3e123]:
+              - button "−" [ref=f3e130] [cursor=pointer]:
+                - paragraph [ref=f3e134]: −
+              - slider "Volatile Matter" [ref=f3e144]:
+                - generic:
+                  - generic:
+                    - paragraph: "31.10"
+              - button "+" [ref=f3e152] [cursor=pointer]:
+                - paragraph [ref=f3e156]: +
+            - generic [ref=f3e158]:
+              - generic [ref=f3e159]: 0%
+              - generic [ref=f3e160]: 100%
+        - generic [ref=f3e162]:
+          - generic [ref=f3e164]:
+            - generic [ref=f3e168]:
+              - generic [ref=f3e169]:
+                - generic [ref=f3e170]: ⚡
+                - generic [ref=f3e171]: Fixed Carbon
+              - generic [ref=f3e172]:
+                - generic [ref=f3e173]: "40.7"
+                - generic [ref=f3e174]: "%"
+            - generic [ref=f3e176]:
+              - button "−" [ref=f3e183] [cursor=pointer]:
+                - paragraph [ref=f3e187]: −
+              - slider "Fixed Carbon" [ref=f3e197]:
+                - generic:
+                  - generic:
+                    - paragraph: "40.70"
+              - button "+" [ref=f3e205] [cursor=pointer]:
+                - paragraph [ref=f3e209]: +
+            - generic [ref=f3e211]:
+              - generic [ref=f3e212]: 0%
+              - generic [ref=f3e213]: 100%
+          - generic [ref=f3e215]:
+            - generic [ref=f3e219]:
+              - generic [ref=f3e220]:
+                - generic [ref=f3e221]: 🪨
+                - generic [ref=f3e222]: Ash
+              - generic [ref=f3e223]:
+                - generic [ref=f3e224]: "23.0"
+                - generic [ref=f3e225]: "%"
+            - generic [ref=f3e227]:
+              - button "−" [ref=f3e234] [cursor=pointer]:
+                - paragraph [ref=f3e238]: −
+              - slider "Ash" [ref=f3e248]:
+                - generic:
+                  - generic:
+                    - paragraph: "23.00"
+              - button "+" [ref=f3e256] [cursor=pointer]:
+                - paragraph [ref=f3e260]: +
+            - generic [ref=f3e262]:
+              - generic [ref=f3e263]: 0%
+              - generic [ref=f3e264]: 100%
+      - generic [ref=f3e269]: "✓ Sum of inputs: 100.0%"
+      - generic [ref=f3e273]:
+        - button "Predict" [active] [ref=f3e278] [cursor=pointer]:
+          - paragraph [ref=f3e282]: Predict
+        - button "Reset" [ref=f3e287] [cursor=pointer]:
+          - paragraph [ref=f3e291]: Reset
+        - button "Load example" [ref=f3e296] [cursor=pointer]:
+          - paragraph [ref=f3e300]: Load example
+      - generic [ref=f3e308]:
+        - generic [ref=f3e315]:
+          - generic [ref=f3e316]: 🔥
+          - generic [ref=f3e317]: Predicted GCV
+          - generic [ref=f3e318]: 5,404
+          - generic [ref=f3e319]: kcal/kg
+        - generic [ref=f3e323]:
+          - generic [ref=f3e328]: 90% Confidence Interval
+          - generic [ref=f3e334]:
+            - img
+            - img:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: 5,046
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: 5,762
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: 5,404 kcal/kg
+            - img
+        - generic [ref=f3e344]:
+          - generic [ref=f3e345]: 📐
+          - generic [ref=f3e346]: Model RMSE
+          - generic [ref=f3e347]: ± 153
+          - generic [ref=f3e348]: extra_trees, test set
+      - generic [ref=f3e350]:
+        - paragraph [ref=f3e355]: Why this prediction?
+        - paragraph [ref=f3e360]: Moisture (+349.22 kcal/kg) increased the predicted GCV, while Std.Ash (-638.31 kcal/kg), Fixed_Carbon (-337.37 kcal/kg), Volatile_matter (-57.12 kcal/kg) decreased it.
+        - generic [ref=f3e366]:
+          - img:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: "-638"
+                          - generic:
+                            - generic: "+349"
+                          - generic:
+                            - generic: "-337"
+                          - generic:
+                            - generic: "-57"
+                          - generic:
+                            - generic: 5,404
+                - generic:
+                  - generic:
+                    - generic: Std.Ash
+                  - generic:
+                    - generic: Moisture
+                  - generic:
+                    - generic: Fixed_Carbon
+                  - generic:
+                    - generic: Volatile_matter
+                  - generic:
+                    - generic: Prediction
+                - generic:
+                  - generic:
+                    - generic: "5400"
+                  - generic:
+                    - generic: "5600"
+                  - generic:
+                    - generic: "5800"
+                  - generic:
+                    - generic: "6000"
+          - img:
+            - generic:
+              - generic:
+                - generic: kcal/kg
+          - img
+      - generic [ref=f3e384]:
+        - text: Built with Streamlit · scikit-learn · SHAP · v1.0 ·
+        - link "GitHub" [ref=f3e385] [cursor=pointer]:
+          - /url: https://github.com/kumaraman2017/GCV_Prediction
+  - img [ref=f3e386]

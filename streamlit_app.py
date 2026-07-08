@@ -69,6 +69,7 @@ def load_metadata():
 def reset_inputs():
     for column, value in DEFAULTS.items():
         st.session_state[column] = value
+    st.session_state.pop("result", None)
 
 
 def load_example():
@@ -131,24 +132,50 @@ if predict_clicked:
     metadata = load_metadata()
     rmse_kcal = metadata["metrics"]["rmse"] * KCAL_PER_MJ
 
+    st.session_state["result"] = {
+        "raw_input": raw_input,
+        "prediction_kcal": prediction_kcal,
+        "interval_low_kcal": interval_low_kcal,
+        "interval_high_kcal": interval_high_kcal,
+        "rmse_kcal": rmse_kcal,
+        "model_name": metadata["model_name"],
+        "sentence": sentence,
+        "contributions_kcal": contributions_kcal,
+        "base_value_kcal": explanation["base_value"] * KCAL_PER_MJ,
+    }
+
+if "result" in st.session_state:
+    result = st.session_state["result"]
+
+    if result["raw_input"] != raw_input:
+        st.markdown(
+            '<div class="sum-pill" style="margin-bottom:0.75rem;">'
+            "⚠ Inputs changed — showing the last prediction. Click Predict to refresh."
+            "</div>",
+            unsafe_allow_html=True,
+        )
+
     kpi_col1, kpi_col2, kpi_col3 = st.columns(3)
     with kpi_col1:
-        render_kpi_card("🔥", "Predicted GCV", f"{prediction_kcal:,.0f}", "kcal/kg")
+        render_kpi_card("🔥", "Predicted GCV", f"{result['prediction_kcal']:,.0f}", "kcal/kg")
     with kpi_col2:
         with st.container(key="card-gauge"):
             st.markdown('<div class="slider-label">90% Confidence Interval</div>', unsafe_allow_html=True)
             interval_fig = confidence_interval_chart(
-                interval_low_kcal, interval_high_kcal, prediction_kcal, "kcal/kg", theme
+                result["interval_low_kcal"], result["interval_high_kcal"], result["prediction_kcal"], "kcal/kg", theme
             )
             st.plotly_chart(interval_fig, use_container_width=True, config={"displayModeBar": False})
     with kpi_col3:
-        render_kpi_card("📐", "Model RMSE", f"± {rmse_kcal:,.0f}", f"{metadata['model_name']}, test set")
+        render_kpi_card(
+            "📐", "Model RMSE", f"± {result['rmse_kcal']:,.0f}", f"{result['model_name']}, test set"
+        )
 
     with st.container(key="card-explain"):
         st.markdown('<p class="section-heading">Why this prediction?</p>', unsafe_allow_html=True)
-        st.markdown(f'<p class="explain-sentence">{sentence}</p>', unsafe_allow_html=True)
-        base_value_kcal = explanation["base_value"] * KCAL_PER_MJ
-        fig = shap_waterfall(contributions_kcal, base_value_kcal, prediction_kcal, "kcal/kg", theme)
+        st.markdown(f'<p class="explain-sentence">{result["sentence"]}</p>', unsafe_allow_html=True)
+        fig = shap_waterfall(
+            result["contributions_kcal"], result["base_value_kcal"], result["prediction_kcal"], "kcal/kg", theme
+        )
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
 render_footer(REPO_URL)
