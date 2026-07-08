@@ -4,7 +4,7 @@
 
 **Predict the Gross Calorific Value of coal from proximate analysis â€” with explainable AI and a 90% statistical confidence interval.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://gcvprediction-z2gkxweznrnkrqp6fgvwfd.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://gcvprediction-tyksupziipuppwmrsipzan.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.9-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![SHAP](https://img.shields.io/badge/SHAP-XAI-29B5E8?style=for-the-badge)](https://shap.readthedocs.io/)
@@ -37,7 +37,7 @@ Coal laboratories report four proximate-analysis measurements for every sample â
 
 ## Live Demo
 
-**[gcvprediction-z2gkxweznrnkrqp6fgvwfd.streamlit.app](https://gcvprediction-z2gkxweznrnkrqp6fgvwfd.streamlit.app/)**
+**[gcvprediction-tyksupziipuppwmrsipzan.streamlit.app](https://gcvprediction-tyksupziipuppwmrsipzan.streamlit.app/)**
 
 The app is deployed on Streamlit Community Cloud and requires no login. Drag the sliders, hit **Predict**, and the model responds instantly with:
 - Predicted GCV (kcal/kg)
