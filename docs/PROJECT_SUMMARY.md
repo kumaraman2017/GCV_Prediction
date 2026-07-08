@@ -1,6 +1,6 @@
 # Coal GCV Predictor — Complete Project Summary & Interview Playbook
 
-> Repository: `GCV_Prediction` (local folder `gcv_coal_project`) · Owner: kumaraman2017 · Live demo: https://gcvprediction-z2gkxweznrnkrqp6fgvwfd.streamlit.app/
+> Repository: `GCV_Prediction` (local folder `gcv_coal_project`) · Owner: kumaraman2017 · Live demo: https://gcvprediction-tyksupziipuppwmrsipzan.streamlit.app/
 
 **A note on scope before you read further:** this document was written against the *actual code in the repository*, not the originally imagined 5-sub-project vision. The original design spec (`docs/superpowers/specs/2026-06-28-ml-pipeline-design.md`) planned a `ML Pipeline → Backend API (FastAPI) → Frontend Dashboard (React) → Docker → Docs` pipeline. **Only the ML pipeline was built as originally planned; the Backend API and React frontend were deliberately replaced with a single-file Streamlit app** (see `docs/superpowers/specs/2026-06-29-streamlit-app-design.md`). Docker and CI/CD were explicitly descoped by the project owner: *"this is a college project, kept simple and explainable, not a DevOps showcase."*
 
@@ -739,7 +739,7 @@ No API keys, secrets, or `.env` variables are required to run this project at al
 
 | Aspect | Detail |
 |---|---|
-| **Hosting** | Streamlit Community Cloud (free tier), live at `gcvprediction-z2gkxweznrnkrqp6fgvwfd.streamlit.app` |
+| **Hosting** | Streamlit Community Cloud (free tier), live at `gcvprediction-tyksupziipuppwmrsipzan.streamlit.app` |
 | **Environment variables** | None used |
 | **Build process** | Streamlit Cloud reads `.python-version` (pins Python 3.11) and `requirements.txt` (exact-pinned deps) at the repo root, builds a container image, and runs `streamlit run streamlit_app.py` |
 | **Deployment pipeline** | Push to `master` on GitHub → Streamlit Cloud auto-redeploys (per `docs/superpowers/specs/2026-06-29-streamlit-app-design.md:28-30`) — no manual step, no separate CI trigger |
