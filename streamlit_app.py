@@ -18,7 +18,11 @@ from src.explain.shap_explain import (  # noqa: E402
     explain_single_prediction,
     generate_explanation_sentence,
 )
-from src.models.confidence import compute_confidence_interval  # noqa: E402
+from src.models.confidence import (  # noqa: E402
+    compute_confidence_interval,
+    compute_effective_rmse,
+    z_for_confidence_level,
+)
 
 from ui.charts import confidence_interval_chart, shap_waterfall  # noqa: E402
 from ui.components import (  # noqa: E402
@@ -101,6 +105,16 @@ raw_input = {column: float(st.session_state[column]) for column in FEATURE_COLUM
 total = sum(raw_input.values())
 render_sum_pill(total, theme)
 
+st.session_state.setdefault("confidence_level", 90)
+level_col, _ = st.columns([2, 3])
+with level_col:
+    st.selectbox(
+        "Confidence level",
+        options=[70, 80, 90, 95, 99],
+        format_func=lambda level: f"{level}%",
+        key="confidence_level",
+    )
+
 with st.container(key="card-actions"):
     button_col1, button_col2, button_col3 = st.columns(3)
     predict_clicked = button_col1.button("Predict", type="primary", use_container_width=True)
@@ -115,9 +129,12 @@ if predict_clicked:
     if artifact["scaler"] is not None:
         model_input = artifact["scaler"].transform(feature_vector.reshape(1, -1))[0]
 
+    confidence_level = st.session_state["confidence_level"]
+    z = z_for_confidence_level(confidence_level)
+
     prediction_mj = float(artifact["estimator"].predict(model_input.reshape(1, -1))[0])
     prediction_kcal = prediction_mj * KCAL_PER_MJ
-    interval_low_mj, interval_high_mj = compute_confidence_interval(artifact, raw_input, prediction_mj)
+    interval_low_mj, interval_high_mj = compute_confidence_interval(artifact, raw_input, prediction_mj, z=z)
     interval_low_kcal = interval_low_mj * KCAL_PER_MJ
     interval_high_kcal = interval_high_mj * KCAL_PER_MJ
 
@@ -130,10 +147,11 @@ if predict_clicked:
     sentence = generate_explanation_sentence(contributions_kcal, unit="kcal/kg")
 
     metadata = load_metadata()
-    rmse_kcal = metadata["metrics"]["rmse"] * KCAL_PER_MJ
+    rmse_kcal = compute_effective_rmse(artifact, raw_input) * KCAL_PER_MJ
 
     st.session_state["result"] = {
         "raw_input": raw_input,
+        "confidence_level": confidence_level,
         "prediction_kcal": prediction_kcal,
         "interval_low_kcal": interval_low_kcal,
         "interval_high_kcal": interval_high_kcal,
@@ -147,7 +165,7 @@ if predict_clicked:
 if "result" in st.session_state:
     result = st.session_state["result"]
 
-    if result["raw_input"] != raw_input:
+    if result["raw_input"] != raw_input or result["confidence_level"] != st.session_state["confidence_level"]:
         st.markdown(
             '<div class="sum-pill" style="margin-bottom:0.75rem;">'
             "⚠ Inputs changed — showing the last prediction. Click Predict to refresh."
@@ -160,14 +178,17 @@ if "result" in st.session_state:
         render_kpi_card("🔥", "Predicted GCV", f"{result['prediction_kcal']:,.0f}", "kcal/kg")
     with kpi_col2:
         with st.container(key="card-gauge"):
-            st.markdown('<div class="slider-label">90% Confidence Interval</div>', unsafe_allow_html=True)
+            st.markdown(
+                f'<div class="slider-label">{result["confidence_level"]}% Confidence Interval</div>',
+                unsafe_allow_html=True,
+            )
             interval_fig = confidence_interval_chart(
                 result["interval_low_kcal"], result["interval_high_kcal"], result["prediction_kcal"], "kcal/kg", theme
             )
             st.plotly_chart(interval_fig, use_container_width=True, config={"displayModeBar": False})
     with kpi_col3:
         render_kpi_card(
-            "📐", "Model RMSE", f"± {result['rmse_kcal']:,.0f}", f"{result['model_name']}, test set"
+            "📐", "Prediction RMSE", f"± {result['rmse_kcal']:,.0f}", f"{result['model_name']}, this input"
         )
 
     with st.container(key="card-explain"):

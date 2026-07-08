@@ -2,6 +2,24 @@ import numpy as np
 
 Z_90 = 1.645  # two-sided normal z-score for a ~90% interval
 
+# Two-sided normal z-scores for common confidence levels.
+CONFIDENCE_LEVEL_Z = {
+    70: 1.036,
+    75: 1.150,
+    80: 1.282,
+    85: 1.440,
+    90: 1.645,
+    95: 1.960,
+    99: 2.576,
+}
+
+
+def z_for_confidence_level(level: int) -> float:
+    """Look up the two-sided normal z-score for a confidence level (e.g. 90 -> 1.645)."""
+    if level not in CONFIDENCE_LEVEL_Z:
+        raise ValueError(f"Unsupported confidence level: {level}. Choose from {sorted(CONFIDENCE_LEVEL_Z)}.")
+    return CONFIDENCE_LEVEL_Z[level]
+
 
 def _to_feature_vector(raw_input: dict, feature_columns: list[str]) -> np.ndarray:
     return np.array([raw_input[column] for column in feature_columns], dtype=float)
@@ -75,10 +93,15 @@ def compute_confidence(artifact: dict, raw_input: dict) -> float:
     return max(0.0, min(100.0, base_score * penalty))
 
 
-def compute_confidence_interval(artifact: dict, raw_input: dict, prediction: float, z: float = Z_90) -> tuple[float, float]:
-    """Prediction interval combining ensemble/local spread (epistemic) with the
-    model's test-set RMSE (irreducible error), widened when inputs extrapolate
-    beyond the training data's observed range."""
+def compute_effective_rmse(artifact: dict, raw_input: dict) -> float:
+    """Per-prediction standard error: combines this input's ensemble/local
+    spread (epistemic uncertainty) with the model's test-set RMSE (irreducible
+    error) via sqrt-sum, then widens the result when inputs extrapolate beyond
+    the training data's observed range. Unlike the model's global test-set
+    RMSE, this varies per prediction because the local spread depends on where
+    the input falls relative to the training data.
+
+    compute_confidence_interval's half-width equals z * this value."""
     feature_columns = artifact["feature_columns"]
     raw_vector = _to_feature_vector(raw_input, feature_columns)
     X_row = _transform_for_model(raw_vector, artifact["scaler"])
@@ -88,6 +111,10 @@ def compute_confidence_interval(artifact: dict, raw_input: dict, prediction: flo
     total_uncertainty = float(np.sqrt(spread**2 + residual_std**2))
 
     penalty = max(_extrapolation_penalty(raw_input, artifact["feature_ranges"]), 1e-6)
-    half_width = z * total_uncertainty / penalty
+    return total_uncertainty / penalty
 
+
+def compute_confidence_interval(artifact: dict, raw_input: dict, prediction: float, z: float = Z_90) -> tuple[float, float]:
+    """Prediction interval built from compute_effective_rmse: prediction ± z * effective_rmse."""
+    half_width = z * compute_effective_rmse(artifact, raw_input)
     return prediction - half_width, prediction + half_width

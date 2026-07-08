@@ -12,3 +12,4 @@ build/
 .superpowers/
 .claude/
 catboost_info/
+.playwright-mcp/

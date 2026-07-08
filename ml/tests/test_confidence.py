@@ -5,7 +5,13 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeRegressor
 
-from src.models.confidence import _extrapolation_penalty, compute_confidence, compute_confidence_interval
+from src.models.confidence import (
+    _extrapolation_penalty,
+    compute_confidence,
+    compute_confidence_interval,
+    compute_effective_rmse,
+    z_for_confidence_level,
+)
 
 FEATURE_COLUMNS = ["Moisture", "Volatile_matter", "Fixed_Carbon", "Std.Ash"]
 
@@ -146,6 +152,67 @@ def test_confidence_interval_widens_for_out_of_range_input():
     out_of_range_low, out_of_range_high = compute_confidence_interval(artifact, out_of_range_input, prediction)
 
     assert (out_of_range_high - out_of_range_low) > (in_range_high - in_range_low)
+
+
+def test_effective_rmse_matches_interval_half_width():
+    X, y = _synthetic_training_data()
+    estimator = RandomForestRegressor(n_estimators=20, random_state=42).fit(X, y)
+    artifact = _base_artifact(estimator, X, y, "bagging_ensemble")
+    raw_input = _sample_input(X)
+    prediction = float(estimator.predict(X[0].reshape(1, -1))[0])
+    z = 1.645
+
+    low, high = compute_confidence_interval(artifact, raw_input, prediction, z=z)
+    effective_rmse = compute_effective_rmse(artifact, raw_input)
+
+    assert (high - low) == pytest.approx(2 * z * effective_rmse)
+
+
+def test_effective_rmse_widens_for_out_of_range_input():
+    X, y = _synthetic_training_data()
+    estimator = RandomForestRegressor(n_estimators=20, random_state=42).fit(X, y)
+    artifact = _base_artifact(estimator, X, y, "bagging_ensemble")
+
+    in_range_input = _sample_input(X)
+    out_of_range_input = dict(in_range_input)
+    out_of_range_input["Moisture"] = artifact["feature_ranges"]["Moisture"][1] + 50.0
+
+    in_range_rmse = compute_effective_rmse(artifact, in_range_input)
+    out_of_range_rmse = compute_effective_rmse(artifact, out_of_range_input)
+
+    assert out_of_range_rmse > in_range_rmse
+
+
+def test_effective_rmse_varies_between_different_inputs():
+    X, y = _synthetic_training_data()
+    estimator = RandomForestRegressor(n_estimators=20, random_state=42).fit(X, y)
+    artifact = _base_artifact(estimator, X, y, "bagging_ensemble")
+
+    rmse_values = {compute_effective_rmse(artifact, _sample_input(X[[i]])) for i in range(10)}
+
+    assert len(rmse_values) > 1
+
+
+def test_z_for_confidence_level_increases_with_level():
+    assert z_for_confidence_level(70) < z_for_confidence_level(80) < z_for_confidence_level(90) < z_for_confidence_level(95)
+
+
+def test_z_for_confidence_level_rejects_unknown_level():
+    with pytest.raises(ValueError):
+        z_for_confidence_level(42)
+
+
+def test_confidence_interval_widens_with_higher_confidence_level():
+    X, y = _synthetic_training_data()
+    estimator = RandomForestRegressor(n_estimators=20, random_state=42).fit(X, y)
+    artifact = _base_artifact(estimator, X, y, "bagging_ensemble")
+    raw_input = _sample_input(X)
+    prediction = float(estimator.predict(X[0].reshape(1, -1))[0])
+
+    low_70, high_70 = compute_confidence_interval(artifact, raw_input, prediction, z=z_for_confidence_level(70))
+    low_90, high_90 = compute_confidence_interval(artifact, raw_input, prediction, z=z_for_confidence_level(90))
+
+    assert (high_90 - low_90) > (high_70 - low_70)
 
 
 def test_confidence_interval_larger_z_widens_interval():
